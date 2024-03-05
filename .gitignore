@@ -1,0 +1,107 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.buildlog/
+.history
+.svn/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# VS Code related
+.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio build artifacts
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+# iOS related
+**/ios/.symlinks/
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/App.framework
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/flutter_export_environment.sh
+**/ios/Flutter/Flutter.podspec
+**/ios/Pods/
+**/ios/Runner.xcodeproj
+**/ios/Runner.xcworkspace
+**/ios/Flutter/ephemeral/
+
+# Mac OS related
+**/macos/Pods/
+**/macos/Flutter/ephemeral/
+**/macos/Runner.xcodeproj
+**/macos/Runner.xcworkspace
+
+# Web related
+**/web/flutter_service_worker.js
+**/web/icons/
+**/web/manifest.json
+
+# Windows related
+**/windows/flutter/
+**/windows/Runner.sln
+**/windows/Runner.vcxproj
+**/windows/Runner.vcxproj.filters
+**/windows/Runner.vcxproj.user
+
+# Linux related
+**/linux/flutter/
+**/linux/CMakeLists.txt
+**/linux/Makefile
+**/linux/my_application.cc
+
+# Temp files
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+
+# Logs
+*.log
+
+# Dependency directories
+.dart_tool/
+.pub-cache/
+.packages
+
+# Build outputs
+/build/
+/coverage/
+
+# Local configuration files
+**/.env
+**/.env.local
+
+# Generated files
+.generated/
+
+# IDEs and editors
+.idea/
+.vscode/
