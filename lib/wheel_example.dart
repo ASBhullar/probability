@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:probability/learn_category.dart';
 import 'package:probability/play_category.dart';
 import 'home_page.dart';
+import 'package:probability/learn_category.dart';
 class wheel_example extends StatelessWidget {
   const wheel_example({Key? key});
 
@@ -36,6 +37,45 @@ class wheel_example extends StatelessWidget {
                     width: screenSize.width * 0.051,
                     height: screenSize.height * 0.044,
                     fit: BoxFit.contain,
+                  ),
+                ),
+              ),
+              //PREVI
+              Positioned(
+                left: screenSize.width * 0.029,
+                top: screenSize.height * 0.94,
+                child:GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => LearnCategories()),
+                    );
+                  },
+                  child: Image.network(
+                    'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2FVLycwtx8L8la6K4YYSH8%2F7f9a6946b79a5f10106b07e7024beaf5.png',
+                    width: screenSize.width * 0.061,
+                    height: screenSize.height * 0.043,
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              ),
+              //NEXT
+              Positioned(
+                left: screenSize.width * 0.935,
+                top: screenSize.height * 0.94,
+                child:GestureDetector (
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => wheel_example()),
+                    );
+                  },
+
+                  child: Image.network(
+                    'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2FVLycwtx8L8la6K4YYSH8%2Fbaae1378b31042b9a1c6751db15bf804.png',
+                    width: screenSize.width * 0.061,
+                    height: screenSize.height * 0.046,
+                    fit: BoxFit.scaleDown,
                   ),
                 ),
               ),
@@ -113,11 +153,11 @@ class wheel_example extends StatelessWidget {
                         ),
                       ),
                       Positioned(
-                        left: screenSize.width * 0,
+                        left:0.0,
                         top: screenSize.height * 0.12,
                         child: SizedBox(
-                          width: screenSize.width *0.7,
-                          height: screenSize.height * 0.18 ,
+                          width: screenSize.width*0.57 ,
+                          height: screenSize.height * 0.3,
                           child: Text(
                             'FAVORABLE OUTCOMES',
                             textAlign: TextAlign.center,
@@ -133,8 +173,8 @@ class wheel_example extends StatelessWidget {
                         ),
                       ),
                       Positioned(
-                        left: screenSize.width*0.5,
-                        top: screenSize.height *0.45,
+                        left: screenSize.width*0.08,
+                        top: screenSize.height *0.4,
                         child: SizedBox(
                           width: screenSize.width *0.48,
                           height: screenSize.height *0.78,
@@ -153,17 +193,17 @@ class wheel_example extends StatelessWidget {
                         ),
                       ),
                       Positioned(
-                        left: 710,
-                        top: 211,
+                        left: screenSize.width*0.87,
+                        top: screenSize.height*0.08,
                         child: SizedBox(
-                          width: 214.65,
-                          height: 67.31,
+                          width: screenSize.width*0.2,
+                          height: screenSize.height*0.6,
                           child: Text(
                             '-',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: 128,
+                              fontSize: 228,
                               fontFamily: 'Luckiest Guy',
                               fontWeight: FontWeight.w400,
                               height: 0,
@@ -173,11 +213,11 @@ class wheel_example extends StatelessWidget {
                         ),
                       ),
                       Positioned(
-                        left: 753.22,
-                        top: 291.37,
+                        left: screenSize.width* 0.85,
+                        top: screenSize.height * 0.291,
                         child: SizedBox(
-                          width: 127.63,
-                          height: 110.70,
+                          width: screenSize.width*0.127,
+                          height: screenSize.height*0.110,
                           child: Text(
                             '8',
                             textAlign: TextAlign.center,
@@ -192,12 +232,13 @@ class wheel_example extends StatelessWidget {
                           ),
                         ),
                       ),
+                      //complete wheel picture
                       Positioned(
-                        left: screenSize.width*0.7,
-                        top: screenSize.height*0.4,
+                        left: screenSize.width*0.17,
+                        top: screenSize.height*0.18,
                         child: Container(
-                          width: screenSize.width*0.6,
-                          height: screenSize.height * 0.1,
+                          width: screenSize.width*0.2,
+                          height: screenSize.height * 0.2,
                           decoration: BoxDecoration(
                             image: DecorationImage(
                               image: NetworkImage("https://via.placeholder.com/155x96"),
@@ -207,11 +248,11 @@ class wheel_example extends StatelessWidget {
                         ),
                       ),
                       Positioned(
-                        left: 753.12,
-                        top: 48.71,
+                        left: screenSize.width*0.83,
+                        top: screenSize.height*0.05,
                         child: SizedBox(
-                          width: 127.42,
-                          height: 142.59,
+                          width: screenSize.width*0.05,
+                          height: screenSize.height*0.15,
                           child: Text(
                             '2',
                             textAlign: TextAlign.center,

@@ -2,67 +2,112 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:probability/learn_category.dart';
 import 'package:probability/play_category.dart';
+import 'package:probability/play_category.dart';
+import 'home_page.dart';
+import 'package:probability/wheel_example.dart';
+
 
 class dice_example extends StatelessWidget {
   const dice_example({Key? key});
-  @override
-  Widget build(BuildContext context) {
-  return MaterialApp(
-  theme: ThemeData.dark().copyWith(
-  scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47),
-  ),
-  home: Scaffold(
-  body: ListView(children: [
-  Frame1(),
-  ]),
-  ),
-  );
-  }
-  }
 
-  class Frame1 extends StatelessWidget {
+  @override
   @override
   Widget build(BuildContext context) {
-  return Column(
-  children: [
-  Container(
-  width: 1024,
-  height: 1366,
-  clipBehavior: Clip.antiAlias,
-  decoration: BoxDecoration(
-  gradient: LinearGradient(
-  begin: Alignment(0.00, -1.00),
-  end: Alignment(0, 1),
-  colors: [Color(0xFF13882D), Color(0x82CC2FA3)],
-  ),
-  ),
-  child: Stack(
-  children: [
+    final Size screenSize = MediaQuery.of(context).size;
+    return Container(
+      width: screenSize.width,
+      height: screenSize.height,
+      clipBehavior: Clip.hardEdge,
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+          colors: [Color(0xFF7745E2), Color(0x007745E2)],  // colour of background
+        ),
+      ),
+      child: Stack(
+      children: [
+    //home image
+    Positioned(
+    left: screenSize.width * 0.029,
+      top: screenSize.height * 0.027,
+      child: GestureDetector(
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Homepage()),
+          );
+        },
+        child: Image.network(
+          'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2FVLycwtx8L8la6K4YYSH8%2F8e41733af163909d6944dac1c628ba81.png',
+          width: screenSize.width * 0.051,
+          height: screenSize.height * 0.044,
+          fit: BoxFit.contain,
+        ),
+      ),
+    ),
+      //PREVI
+      Positioned(
+        left: screenSize.width * 0.029,
+        top: screenSize.height * 0.94,
+        child:GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => LearnCategories()),
+            );
+          },
+          child: Image.network(
+            'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2FVLycwtx8L8la6K4YYSH8%2F7f9a6946b79a5f10106b07e7024beaf5.png',
+            width: screenSize.width * 0.061,
+            height: screenSize.height * 0.043,
+            fit: BoxFit.contain,
+          ),
+        ),
+      ),
+      //NEXT
+      Positioned(
+        left: screenSize.width * 0.935,
+        top: screenSize.height * 0.94,
+        child:GestureDetector (
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => wheel_example()),
+            );
+          },
+
+          child: Image.network(
+            'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2FVLycwtx8L8la6K4YYSH8%2Fbaae1378b31042b9a1c6751db15bf804.png',
+            width: screenSize.width * 0.061,
+            height: screenSize.height * 0.046,
+            fit: BoxFit.scaleDown,
+          ),
+        ),
+      ),
   Positioned(
-  left: 72,
-  top: 74,
+  left: screenSize.width*0.04 ,
+  top: screenSize.height*0.02,
   child: SizedBox(
   width: 896,
   child: Text(
-  'DICE  ',
+  'DICE',
   textAlign: TextAlign.center,
   style: TextStyle(
-  color: Colors.black.withOpacity(0.20000000298023224),
+  color: Colors.black.withOpacity(0.8),
   fontSize: 64,
-  fontFamily: 'Roboto',
-  fontWeight: FontWeight.w800,
-  height: 0,
-  letterSpacing: 6.40,
+   fontFamily: 'Roboto',
+  // fontWeight: FontWeight.w800,
+  // letterSpacing: 6.40,
   ),
   ),
   ),
   ),
+  //dice gif
   Positioned(
-  left: -119,
-  top: 166,
+  left: screenSize.width*0.04 ,
+  top: screenSize.height*0.1,
   child: Container(
-  width: 579,
-  height: 478,
+  width: screenSize.width *0.45,
+  height: screenSize.height* 0.4,
   decoration: BoxDecoration(
   image: DecorationImage(
   image: NetworkImage("https://via.placeholder.com/579x478"),
@@ -72,19 +117,19 @@ class dice_example extends StatelessWidget {
   ),
   ),
   Positioned(
-  left: 88,
-  top: 818,
+  left: screenSize.width*0.05,
+  top: screenSize.height*0.59,
   child: Container(
-  width: 1000,
-  height: 319,
+  width: screenSize.width*70,
+  height: screenSize.height*29,
   child: Stack(
   children: [
   Positioned(
-  left: 741,
+  left: screenSize.width*0.2,
   top: 0,
   child: SizedBox(
-  width: 140,
-  height: 126,
+  width: screenSize.width*1.38,
+  height: screenSize.height * 0.5,
   child: Text(
   '1',
   textAlign: TextAlign.center,
@@ -100,11 +145,11 @@ class dice_example extends StatelessWidget {
   ),
   ),
   Positioned(
-  left: 752,
-  top: 209,
+  left: screenSize.width*0.84,
+  top: screenSize.height*0.25,
   child: SizedBox(
-  width: 133.32,
-  height: 109.93,
+  width: screenSize.width*0.13,
+  height:screenSize.height*0.19,
   child: Text(
   '6',
   textAlign: TextAlign.center,
@@ -120,11 +165,11 @@ class dice_example extends StatelessWidget {
   ),
   ),
   Positioned(
-  left: 0,
-  top: 267.09,
-  child: SizedBox(
-  width: 473.25,
-  height: 51.91,
+    left: screenSize.width*0.02,
+    top: screenSize.height*0.27,
+    child: SizedBox(
+      width: screenSize.width*0.5,
+      height:screenSize.height*0.19,
   child: Text(
   'TOTAL OUTCOMES',
   textAlign: TextAlign.center,
@@ -140,11 +185,11 @@ class dice_example extends StatelessWidget {
   ),
   ),
   Positioned(
-  left: 624,
-  top: 154,
-  child: SizedBox(
-  width: 344,
-  height: 58,
+    left: screenSize.width*0.8,
+    top: screenSize.height*0.1,
+    child: SizedBox(
+      width: screenSize.width*0.13,
+      height:screenSize.height*0.19,
   child: Text(
   '-',
   textAlign: TextAlign.center,
@@ -160,31 +205,11 @@ class dice_example extends StatelessWidget {
   ),
   ),
   Positioned(
-  left: 656,
-  top: 154,
-  child: SizedBox(
-  width: 344,
-  height: 58,
-  child: Text(
-  '-',
-  textAlign: TextAlign.center,
-  style: TextStyle(
-  color: Colors.white,
-  fontSize: 128,
-  fontFamily: 'Luckiest Guy',
-  fontWeight: FontWeight.w400,
-  height: 0,
-  letterSpacing: 102.40,
-  ),
-  ),
-  ),
-  ),
-  Positioned(
-  left: 0,
-  top: 70.89,
-  child: SizedBox(
-  width: 524.46,
-  height: 110.70,
+    left: screenSize.width*0.02,
+    top: screenSize.height*0.1,
+    child: SizedBox(
+      width: screenSize.width*0.5,
+      height:screenSize.height*0.19,
   child: Text(
   'FAVORABLE OUTCOMES',
   textAlign: TextAlign.center,
@@ -199,12 +224,13 @@ class dice_example extends StatelessWidget {
   ),
   ),
   ),
+  // all dice pics
   Positioned(
-  left: 13.24,
-  top: 186.93,
+  left: screenSize.width*0.02,
+    top: screenSize.height*0.15,
   child: Container(
-  width: 409.68,
-  height: 49.62,
+    width: screenSize.width*0.7,
+    height:screenSize.height*0.1,
   decoration: BoxDecoration(
   image: DecorationImage(
   image: NetworkImage("https://via.placeholder.com/410x50"),
@@ -213,12 +239,13 @@ class dice_example extends StatelessWidget {
   ),
   ),
   ),
+  // dice 6
   Positioned(
-  left: 177.47,
-  top: 6,
-  child: Container(
-  width: 81.30,
-  height: 72.52,
+    left: screenSize.width*0.2,
+    top: screenSize.height*0.0,
+    child: Container(
+      width: screenSize.width*0.1,
+      height:screenSize.height*0.1,
   decoration: BoxDecoration(
   image: DecorationImage(
   image: NetworkImage("https://via.placeholder.com/81x73"),
@@ -228,11 +255,11 @@ class dice_example extends StatelessWidget {
   ),
   ),
   Positioned(
-  left: 428,
-  top: 168,
-  child: SizedBox(
-  width: 343,
-  height: 39,
+    left: screenSize.width*0.35,
+    top: screenSize.height*0.05,
+    child: SizedBox(
+      width: screenSize.width*0.7,
+      height:screenSize.height*0.1,
   child: Text(
   '=',
   textAlign: TextAlign.center,
@@ -252,11 +279,11 @@ class dice_example extends StatelessWidget {
   ),
   ),
   Positioned(
-  left: 32,
-  top: 785,
+  left:screenSize.width*0.04,
+  top: screenSize.height*0.53,
   child: Container(
-  width: 968,
-  height: 385,
+  width: screenSize.width*0.96,
+  height: screenSize.height*0.4,
   decoration: ShapeDecoration(
   shape: RoundedRectangleBorder(
   side: BorderSide(width: 3, color: Colors.white),
@@ -265,11 +292,11 @@ class dice_example extends StatelessWidget {
   ),
   ),
   Positioned(
-  left: 1088,
-  top: 612,
+  left: screenSize.width*0.5,
+  top: screenSize.height*0.1,
   child: Container(
-  width: 1026,
-  height: 671,
+  width: screenSize.width*0.5,
+  height: screenSize.height*0.4,
   decoration: ShapeDecoration(
   shape: RoundedRectangleBorder(
   side: BorderSide(width: 3, color: Colors.white),
@@ -278,37 +305,11 @@ class dice_example extends StatelessWidget {
   ),
   ),
   Positioned(
-  left: 492,
-  top: 244,
-  child: Container(
-  width: 508,
-  height: 319,
-  decoration: ShapeDecoration(
-  shape: RoundedRectangleBorder(
-  side: BorderSide(width: 3, color: Colors.white),
-  ),
-  ),
-  ),
-  ),
-  Positioned(
-  left: 1507,
-  top: 244,
-  child: Container(
-  width: 525,
-  height: 319,
-  decoration: ShapeDecoration(
-  shape: RoundedRectangleBorder(
-  side: BorderSide(width: 3, color: Colors.white),
-  ),
-  ),
-  ),
-  ),
-  Positioned(
-  left: 512,
-  top: 287,
+  left: screenSize.width*0.55,
+  top: screenSize.height*0.2,
   child: SizedBox(
-  width: 488,
-  height: 233,
+  width: screenSize.width*0.4,
+  height: screenSize.height*0.2,
   child: Text(
   'IF YOU ARE PLAYING MONOPOLY AND A SIX MAKES YOU WIN, HOW LIKELY ARE YOU TO GET A SIX?',
   textAlign: TextAlign.center,
@@ -340,9 +341,7 @@ class dice_example extends StatelessWidget {
   ),
   ),
   ],
-  ),
-  ),
-  ],
+    ),
   );
   }
   }
