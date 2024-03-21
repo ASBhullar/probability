@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:probability/home_page.dart';
+import 'ColorSelect_Solve.dart';
 
 class PLayCategories extends StatelessWidget {
   const PLayCategories({Key? key});
@@ -61,7 +62,7 @@ class PLayCategories extends StatelessWidget {
                           // For example, navigate to a new page
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => Homepage()),
+                              MaterialPageRoute(builder: (context) => Homepage()),
                           );
                         },
                         child: Image.network(
@@ -100,13 +101,23 @@ class PLayCategories extends StatelessWidget {
             Positioned(
               left: screenSize.width * 0.119,
               top: screenSize.height * 0.394,
-              child: Image.network(
-                'https://firebasestorage.googleapis.com/v0/b/codeless-app.appspot.com/o/projects%2FVLycwtx8L8la6K4YYSH8%2Fbc6a8b33461c1f15a34e3a03a34ed7d5470d118fwheel%20b.png?alt=media&token=355a551e-e558-41fa-b200-42bf8d1132e0',
-                width: screenSize.width * 0.250,
-                height: screenSize.height * 0.250,
-                fit: BoxFit.scaleDown,
+              child: GestureDetector(
+                onTap: () {
+                  // Navigate to the desired page
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ColorSelectSolve()),
+                  );
+                },
+                child: Image.network(
+                  'https://firebasestorage.googleapis.com/v0/b/codeless-app.appspot.com/o/projects%2FVLycwtx8L8la6K4YYSH8%2Fbc6a8b33461c1f15a34e3a03a34ed7d5470d118fwheel%20b.png?alt=media&token=355a551e-e558-41fa-b200-42bf8d1132e0',
+                  width: screenSize.width * 0.250,
+                  height: screenSize.height * 0.250,
+                  fit: BoxFit.scaleDown,
+                ),
               ),
             ),
+
             Positioned(
               left: screenSize.width * 0.663,
               top: screenSize.height * 0.433,
