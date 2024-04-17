@@ -39,11 +39,16 @@ class dice_example extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => Homepage()),
                 );
               },
-              child: Image.network(
-                'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2FVLycwtx8L8la6K4YYSH8%2F8e41733af163909d6944dac1c628ba81.png',
-                width: screenSize.width * 0.051,
-                height: screenSize.height * 0.044,
-                fit: BoxFit.contain,
+              child: Container(
+                width: screenSize.width * 0.2,
+                height: screenSize.height * 0.1,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: FileImage(File(
+                        "assets/images/firebaseImages/uploads_images_VLycwtx8L8la6K4YYSH8_8e41733af163909d6944dac1c628ba81.png")),
+                    fit: BoxFit.fill,
+                  ),
+                ),
               ),
             ),
           ),
@@ -58,11 +63,16 @@ class dice_example extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => LearnCategories()),
                 );
               },
-              child: Image.network(
-                'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2FVLycwtx8L8la6K4YYSH8%2F7f9a6946b79a5f10106b07e7024beaf5.png',
-                width: screenSize.width * 0.061,
-                height: screenSize.height * 0.043,
-                fit: BoxFit.contain,
+              child: Container(
+                width: screenSize.width * 0.2,
+                height: screenSize.height * 0.1,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: FileImage(File(
+                        "assets/images/firebaseImages/uploads_images_VLycwtx8L8la6K4YYSH8_7f9a6946b79a5f10106b07e7024beaf5.png")),
+                    fit: BoxFit.fill,
+                  ),
+                ),
               ),
             ),
           ),
@@ -77,11 +87,16 @@ class dice_example extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => wheel_example()),
                 );
               },
-              child: Image.network(
-                'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2FVLycwtx8L8la6K4YYSH8%2Fbaae1378b31042b9a1c6751db15bf804.png',
-                width: screenSize.width * 0.061,
-                height: screenSize.height * 0.046,
-                fit: BoxFit.scaleDown,
+              child: Container(
+                width: screenSize.width * 0.2,
+                height: screenSize.height * 0.1,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: FileImage(File(
+                        "assets/images/firebaseImages/uploads_images_VLycwtx8L8la6K4YYSH8_baae1378b31042b9a1c6751db15bf804.png")),
+                    fit: BoxFit.fill,
+                  ),
+                ),
               ),
             ),
           ),
@@ -112,8 +127,7 @@ class dice_example extends StatelessWidget {
               height: screenSize.height * 0.4,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: FileImage(File(
-                      "C:\Users\Abdullah Khan\Documents\GitHub\probability\images\dice gif.gif")),
+                  image: FileImage(File("images/dice gif.gif")),
                   fit: BoxFit.fill,
                 ),
               ),
@@ -237,7 +251,7 @@ class dice_example extends StatelessWidget {
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           image: FileImage(File(
-                              "C:\Users\Abdullah Khan\Documents\GitHub\probability\images\WhatsApp Image 2024-03-13 at 00.44.04_f3c399ee.jpg")),
+                              "images/WhatsApp Image 2024-03-13 at 00.44.04_f3c399ee.jpg")),
                           fit: BoxFit.fill,
                         ),
                       ),
@@ -253,7 +267,7 @@ class dice_example extends StatelessWidget {
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           image: FileImage(File(
-                              "C:\Users\Abdullah Khan\Documents\GitHub\probability\images\WhatsApp Image 2024-03-13 at 00.44.03_abf668f8.jpg")),
+                              "images/WhatsApp Image 2024-03-13 at 00.44.03_abf668f8.jpg")),
                           fit: BoxFit.fill,
                         ),
                       ),
