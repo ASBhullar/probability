@@ -39,13 +39,13 @@ class wheel_example extends StatelessWidget {
                 );
               },
               child: Container(
-                width: screenSize.width * 0.2,
-                height: screenSize.height * 0.1,
+                width: screenSize.width * 0.051,
+                height: screenSize.height * 0.044,
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: FileImage(File(
                         "assets/images/firebaseImages/uploads_images_VLycwtx8L8la6K4YYSH8_8e41733af163909d6944dac1c628ba81.png")),
-                    fit: BoxFit.fill,
+                    fit: BoxFit.contain,
                   ),
                 ),
               ),
@@ -63,13 +63,13 @@ class wheel_example extends StatelessWidget {
                 );
               },
               child: Container(
-                width: screenSize.width * 0.2,
-                height: screenSize.height * 0.1,
+                width: screenSize.width * 0.061,
+                height: screenSize.height * 0.043,
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: FileImage(File(
                         "assets/images/firebaseImages/uploads_images_VLycwtx8L8la6K4YYSH8_7f9a6946b79a5f10106b07e7024beaf5.png")),
-                    fit: BoxFit.fill,
+                    fit: BoxFit.contain,
                   ),
                 ),
               ),
@@ -87,13 +87,13 @@ class wheel_example extends StatelessWidget {
                 );
               },
               child: Container(
-                width: screenSize.width * 0.2,
-                height: screenSize.height * 0.1,
+                width: screenSize.width * 0.061,
+                height: screenSize.height * 0.046,
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: FileImage(File(
                         "assets/images/firebaseImages/uploads_images_VLycwtx8L8la6K4YYSH8_baae1378b31042b9a1c6751db15bf804.png")),
-                    fit: BoxFit.fill,
+                    fit: BoxFit.scaleDown,
                   ),
                 ),
               ),

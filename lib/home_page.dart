@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:probability/learn_category.dart';
 import 'package:probability/play_category.dart';
 import 'package:probability/profilepage.dart'; // Import the ProfilePage class
+import 'dart:io';
 
 class Homepage extends StatelessWidget {
   const Homepage({Key? key});
@@ -216,15 +217,27 @@ class Homepage extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
-              Image.network(
-                'https://firebasestorage.googleapis.com/v0/b/codeless-app.appspot.com/o/projects%2FVLycwtx8L8la6K4YYSH8%2F4b1eef2377258f507f56a630b90796174f92cdafRectangle%206.png?alt=media&token=e35470dd-b23c-4f8b-b2fb-9d5b5f2cecc4', // Replace with your actual image URL
-                width: screenSize.width * 0.1, // Adjust the width as needed
-                fit: BoxFit.fitWidth,
+              Container(
+                width: screenSize.width * 0.2,
+                height: screenSize.height * 0.1,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: FileImage(
+                        File("assets/images/firebaseImages/dices2Image.png")),
+                    fit: BoxFit.fitWidth,
+                  ),
+                ),
               ),
-              Image.network(
-                'https://firebasestorage.googleapis.com/v0/b/codeless-app.appspot.com/o/projects%2FVLycwtx8L8la6K4YYSH8%2Ffd88a8ac45408c734505345100218c41742b25daballs%20blurr%201.png?alt=media&token=274b1f57-0706-490f-9c59-f6600c36923c', // Replace with your actual image URL
-                width: screenSize.width * 0.1, // Adjust the width as needed
-                fit: BoxFit.fitWidth,
+              Container(
+                width: screenSize.width * 0.2,
+                height: screenSize.height * 0.1,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: FileImage(
+                        File("assets/images/firebaseImages/imageOfBalls.png")),
+                    fit: BoxFit.fitWidth,
+                  ),
+                ),
               ),
             ],
           ),
@@ -257,10 +270,16 @@ class Homepage extends StatelessWidget {
                           50), // Adjust the size as needed
                     ),
                   ),
-                  Image.network(
-                    'https://firebasestorage.googleapis.com/v0/b/codeless-app.appspot.com/o/projects%2FVLycwtx8L8la6K4YYSH8%2Fbc6a8b33461c1f15a34e3a03a34ed7d5470d118fwheel%20b.png?alt=media&token=cf68b70c-b2b8-4ad8-a47d-e9171e06eb66', // Replace with your actual image URL
-                    width: screenSize.width * 0.1, // Adjust the width as needed
-                    fit: BoxFit.fitWidth,
+                  Container(
+                    width: screenSize.width * 0.2,
+                    height: screenSize.height * 0.1,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: FileImage(
+                            File("assets/images/firebaseImages/wheel.png")),
+                        fit: BoxFit.fitWidth,
+                      ),
+                    ),
                   ),
                 ],
               ),
@@ -287,10 +306,16 @@ class Homepage extends StatelessWidget {
                           50), // Adjust the size as needed
                     ),
                   ),
-                  Image.network(
-                    'https://firebasestorage.googleapis.com/v0/b/codeless-app.appspot.com/o/projects%2FVLycwtx8L8la6K4YYSH8%2Fea4ccdc8b18ef59430ab534e835eb2bf6293b247head%20and%20tails%20%20blur.png?alt=media&token=b66a2b8a-9329-4d7e-9e74-3e478cb2f111', // Replace with your actual image URL
-                    width: screenSize.width * 0.1, // Adjust the width as needed
-                    fit: BoxFit.fitWidth,
+                  Container(
+                    width: screenSize.width * 0.2,
+                    height: screenSize.height * 0.1,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: FileImage(File(
+                            "assets/images/firebaseImages/headAndTails.png")),
+                        fit: BoxFit.fitWidth,
+                      ),
+                    ),
                   ),
                 ],
               ),
