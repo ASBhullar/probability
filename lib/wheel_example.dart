@@ -109,7 +109,7 @@ class wheel_example extends StatelessWidget {
                   height: screenSize.height * 0.35,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: FileImage(File("C:\Users\Abdullah Khan\Documents\GitHub\probability\images\WhatsApp Image 2024-03-13 at 00.44.04_26bbdd5f.jpg")),
+                      image: NetworkImage("https://via.placeholder.com/430x500"),
                       fit: BoxFit.fill,
                     ),
                   ),
@@ -132,7 +132,7 @@ class wheel_example extends StatelessWidget {
                           height: screenSize.height * 0.1,
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                              image: FileImage(File("C:\Users\Abdullah Khan\Documents\GitHub\probability\images\WhatsApp Image 2024-03-13 at 00.44.03_4f2b2670.jpg")),
+                              image: NetworkImage("https://via.placeholder.com/430x500"),
                               fit: BoxFit.fill,
                             ),
                           ),
@@ -146,7 +146,7 @@ class wheel_example extends StatelessWidget {
                           height: screenSize.height * 0.1,
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                              image: FileImage(File"C:\Users\Abdullah Khan\Documents\GitHub\probability\images\WhatsApp Image 2024-03-13 at 00.44.03_45e829dc.jpg")),
+                              image: NetworkImage("https://via.placeholder.com/430x500"),
                               fit: BoxFit.fill,
                             ),
                           ),
@@ -241,7 +241,7 @@ class wheel_example extends StatelessWidget {
                           height: screenSize.height * 0.2,
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                              image: FileImage(File("C:\Users\Abdullah Khan\Documents\GitHub\probability\images\WhatsApp Image 2024-03-13 at 00.44.04_26bbdd5f.jpg")),
+                              image: NetworkImage("https://via.placeholder.com/430x500"),
                               fit: BoxFit.fill,
                             ),
                           ),

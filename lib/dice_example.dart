@@ -110,7 +110,7 @@ class dice_example extends StatelessWidget {
   height: screenSize.height* 0.4,
   decoration: BoxDecoration(
   image: DecorationImage(
-  image: FileImage(File("C:\Users\Abdullah Khan\Documents\GitHub\probability\images\dice gif.gif")),
+    image: NetworkImage("https://via.placeholder.com/430x500"),
   fit: BoxFit.fill,
   ),
   ),
@@ -233,7 +233,7 @@ class dice_example extends StatelessWidget {
     height:screenSize.height*0.1,
   decoration: BoxDecoration(
   image: DecorationImage(
-  image: FileImage(File("C:\Users\Abdullah Khan\Documents\GitHub\probability\images\WhatsApp Image 2024-03-13 at 00.44.04_f3c399ee.jpg")),
+    image: NetworkImage("https://via.placeholder.com/430x500"),
   fit: BoxFit.fill,
   ),
   ),
@@ -248,7 +248,7 @@ class dice_example extends StatelessWidget {
       height:screenSize.height*0.1,
   decoration: BoxDecoration(
   image: DecorationImage(
-  image: FileImage(File("C:\Users\Abdullah Khan\Documents\GitHub\probability\images\WhatsApp Image 2024-03-13 at 00.44.03_abf668f8.jpg")),
+    image: NetworkImage("https://via.placeholder.com/430x500"),
   fit: BoxFit.fill,
   ),
   ),
