@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:probability/learn_category.dart';
 import 'package:probability/play_category.dart';
+import 'package:probability/profilepage.dart'; // Import the ProfilePage class
 
 class Homepage extends StatelessWidget {
-  const Homepage({super.key});
+  const Homepage({Key? key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,15 +20,21 @@ class Homepage extends StatelessWidget {
     final formulaeHeight = screenSize.height * 0.10;
 
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          children: <Widget>[
-            buildTopSection(screenSize, topSectionHeight),
-            buildMiddleSection(screenSize, middleSectionHeight),
-            buildFormulaeSection(screenSize, formulaeHeight),
-            buildBottomSection(screenSize, bottomSectionHeight, context),
-          ],
-        ),
+      body: Stack(
+        children: [
+          SingleChildScrollView(
+            child: Column(
+              children: <Widget>[
+                SizedBox(height: 20),
+                buildTopSection(screenSize, topSectionHeight),
+                buildMiddleSection(screenSize, middleSectionHeight),
+                buildFormulaeSection(screenSize, formulaeHeight),
+                buildBottomSection(screenSize, bottomSectionHeight, context),
+              ],
+            ),
+          ),
+          ProfileAvatar(), // Display profile avatar
+        ],
       ),
     );
   }
@@ -192,7 +199,8 @@ class Homepage extends StatelessWidget {
     );
   }
 
-  Widget buildBottomSection(Size screenSize, double height, BuildContext context) {
+  Widget buildBottomSection(
+      Size screenSize, double height, BuildContext context) {
     return Container(
       height: height,
       width: screenSize.width,
@@ -232,7 +240,8 @@ class Homepage extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => LearnCategories()),
+                        MaterialPageRoute(
+                            builder: (context) => LearnCategories()),
                       );
                     },
                     child: const Text(
@@ -242,7 +251,8 @@ class Homepage extends StatelessWidget {
                       ),
                     ),
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(0xFF4182FF), // Adjust the color as needed
+                      backgroundColor:
+                          Color(0xFF4182FF), // Adjust the color as needed
                       fixedSize: Size(screenSize.width * 0.25,
                           50), // Adjust the size as needed
                     ),
@@ -260,7 +270,8 @@ class Homepage extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => PLayCategories()),
+                        MaterialPageRoute(
+                            builder: (context) => PLayCategories()),
                       );
                     },
                     child: const Text(
@@ -270,7 +281,8 @@ class Homepage extends StatelessWidget {
                       ),
                     ),
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(0xFF4182FF), // Adjust the color as needed
+                      backgroundColor:
+                          Color(0xFF4182FF), // Adjust the color as needed
                       fixedSize: Size(screenSize.width * 0.25,
                           50), // Adjust the size as needed
                     ),
@@ -285,6 +297,34 @@ class Homepage extends StatelessWidget {
             ],
           ),
         ],
+      ),
+    );
+  }
+}
+
+class ProfileAvatar extends StatefulWidget {
+  @override
+  _ProfileAvatarState createState() => _ProfileAvatarState();
+}
+
+class _ProfileAvatarState extends State<ProfileAvatar> {
+  @override
+  Widget build(BuildContext context) {
+    return Positioned(
+      top: 20,
+      right: 20,
+      child: GestureDetector(
+        onTap: () {
+          // Navigate to the ProfilePage when user clicks on the image
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => ProfilePage()),
+          );
+        },
+        child: CircleAvatar(
+          radius: 30,
+          backgroundImage: AssetImage('assets/images/avatar.png'),
+        ),
       ),
     );
   }

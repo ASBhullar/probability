@@ -1,0 +1,11 @@
+{
+  "userName": "John Doe",
+  "email": "john.doe@example.com",
+  "globalScore": "1000",
+  "probabilityScore": "750",
+  "languages": {
+    "nativeLanguage":"Spanish",
+    "secondaryLanguage":"English"
+  },
+  "userImage": "assets/images/avatar.png"
+}
