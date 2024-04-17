@@ -26,6 +26,9 @@ class dice_example extends StatelessWidget {
           ], // colour of background
         ),
       ),
+    child: SizedBox(
+      // width: double.infinity,
+      // height: double.infinity,
       child: Stack(
         children: [
           //home image
@@ -44,8 +47,7 @@ class dice_example extends StatelessWidget {
                 height: screenSize.height * 0.044,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: FileImage(
-                        File("assets/images/firebaseImages/homeba81.png")),
+                    image: AssetImage('assets/images/firebaseImages/homeba81.png'),
                     fit: BoxFit.contain,
                   ),
                 ),
@@ -64,12 +66,11 @@ class dice_example extends StatelessWidget {
                 );
               },
               child: Container(
-                width: screenSize.width * 0.061,
-                height: screenSize.height * 0.043,
+                width: screenSize.width * 0.01,
+                height: screenSize.height * 0.045,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: FileImage(
-                        File("assets/images/firebaseImages/backbeaf5.png")),
+                    image: AssetImage('assets/images/firebaseImages/backbeaf5.png'),
                     fit: BoxFit.contain,
                   ),
                 ),
@@ -92,8 +93,7 @@ class dice_example extends StatelessWidget {
                 height: screenSize.height * 0.046,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: FileImage(
-                        File("assets/images/firebaseImages/home804.png")),
+                    image: AssetImage('assets/images/firebaseImages/home804.png'),
                     fit: BoxFit.scaleDown,
                   ),
                 ),
@@ -101,7 +101,7 @@ class dice_example extends StatelessWidget {
             ),
           ),
           Positioned(
-            left: screenSize.width * 0.04,
+            left: screenSize.width * 0.0,
             top: screenSize.height * 0.02,
             child: SizedBox(
               width: 896,
@@ -120,21 +120,21 @@ class dice_example extends StatelessWidget {
           ),
           //dice gif
           Positioned(
-            left: screenSize.width * 0.04,
+            left: screenSize.width * 0.01,
             top: screenSize.height * 0.1,
             child: Container(
-              width: screenSize.width * 0.45,
+              width: screenSize.width * 0.4,
               height: screenSize.height * 0.4,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: FileImage(File("images/dice gif.gif")),
+                    image: AssetImage('assets/images/DICEGIF.png'),
                   fit: BoxFit.fill,
                 ),
               ),
             ),
           ),
           Positioned(
-            left: screenSize.width * 0.05,
+            left: screenSize.width * 0.0,
             top: screenSize.height * 0.59,
             child: Container(
               width: screenSize.width * 70,
@@ -183,7 +183,7 @@ class dice_example extends StatelessWidget {
                   ),
                   Positioned(
                     left: screenSize.width * 0.02,
-                    top: screenSize.height * 0.27,
+                    top: screenSize.height * 0.3,
                     child: SizedBox(
                       width: screenSize.width * 0.5,
                       height: screenSize.height * 0.19,
@@ -203,7 +203,7 @@ class dice_example extends StatelessWidget {
                   ),
                   Positioned(
                     left: screenSize.width * 0.8,
-                    top: screenSize.height * 0.1,
+                    top: screenSize.height * 0.05,
                     child: SizedBox(
                       width: screenSize.width * 0.13,
                       height: screenSize.height * 0.19,
@@ -217,58 +217,6 @@ class dice_example extends StatelessWidget {
                           fontWeight: FontWeight.w400,
                           height: 0,
                           letterSpacing: 102.40,
-                        ),
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    left: screenSize.width * 0.02,
-                    top: screenSize.height * 0.1,
-                    child: SizedBox(
-                      width: screenSize.width * 0.5,
-                      height: screenSize.height * 0.19,
-                      child: Text(
-                        'FAVORABLE OUTCOMES',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 30,
-                          fontFamily: 'Roboto',
-                          fontWeight: FontWeight.w400,
-                          height: 0,
-                          letterSpacing: 6,
-                        ),
-                      ),
-                    ),
-                  ),
-                  // all dice pics
-                  Positioned(
-                    left: screenSize.width * 0.02,
-                    top: screenSize.height * 0.15,
-                    child: Container(
-                      width: screenSize.width * 0.7,
-                      height: screenSize.height * 0.1,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: FileImage(File(
-                              "images/WhatsApp Image 2024-03-13 at 00.44.04_f3c399ee.jpg")),
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                    ),
-                  ),
-                  // dice 6
-                  Positioned(
-                    left: screenSize.width * 0.2,
-                    top: screenSize.height * 0.0,
-                    child: Container(
-                      width: screenSize.width * 0.1,
-                      height: screenSize.height * 0.1,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: FileImage(File(
-                              "images/WhatsApp Image 2024-03-13 at 00.44.03_abf668f8.jpg")),
-                          fit: BoxFit.fill,
                         ),
                       ),
                     ),
@@ -293,15 +241,67 @@ class dice_example extends StatelessWidget {
                       ),
                     ),
                   ),
+                  Positioned(
+                    left: screenSize.width * 0.0,
+                    top: screenSize.height * 0.1,
+                    child: SizedBox(
+                      width: screenSize.width*0.5 ,
+                      height: screenSize.height * 0.1,
+                      child: Text(
+                        'FAVORABLE OUTCOMES',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 30,
+                          fontFamily: 'Roboto',
+                          fontWeight: FontWeight.w400,
+                          height: 0,
+                          letterSpacing: 6,
+                        ),
+                      ),
+                    ),
+                  ),
+                  // all dice pics
+                  Positioned(
+                    left: screenSize.width * 0.02,
+                    top: screenSize.height * 0.17,
+                    child: Container(
+                      width: screenSize.width * 0.7,
+                      height: screenSize.height * 0.1,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage('assets/images/all6dice.jpg'),
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                    ),
+                  ),
+                  // dice 6
+                  Positioned(
+                    left: screenSize.width * 0.2,
+                    top: screenSize.height * 0.0,
+                    child: Container(
+                      width: screenSize.width * 0.1,
+                      height: screenSize.height * 0.1,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage('assets/images/6DICE.jpg'),
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                    ),
+                  ),
+
                 ],
               ),
             ),
           ),
+          //the huge box
           Positioned(
-            left: screenSize.width * 0.04,
+            left: screenSize.width * 0.01,
             top: screenSize.height * 0.53,
             child: Container(
-              width: screenSize.width * 0.96,
+              width: screenSize.width * 0.97,
               height: screenSize.height * 0.4,
               decoration: ShapeDecoration(
                 shape: RoundedRectangleBorder(
@@ -310,8 +310,9 @@ class dice_example extends StatelessWidget {
               ),
             ),
           ),
+          //the monopoly box
           Positioned(
-            left: screenSize.width * 0.5,
+            left: screenSize.width * 0.45,
             top: screenSize.height * 0.1,
             child: Container(
               width: screenSize.width * 0.5,
@@ -324,10 +325,10 @@ class dice_example extends StatelessWidget {
             ),
           ),
           Positioned(
-            left: screenSize.width * 0.55,
+            left: screenSize.width * 0.45,
             top: screenSize.height * 0.2,
             child: SizedBox(
-              width: screenSize.width * 0.4,
+              width: screenSize.width * 0.5,
               height: screenSize.height * 0.2,
               child: Text(
                 'IF YOU ARE PLAYING MONOPOLY AND A SIX MAKES YOU WIN, HOW LIKELY ARE YOU TO GET A SIX?',
@@ -343,23 +344,9 @@ class dice_example extends StatelessWidget {
               ),
             ),
           ),
-          Positioned(
-            left: 32,
-            top: 4,
-            child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 10),
-              clipBehavior: Clip.antiAlias,
-              decoration: BoxDecoration(),
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [],
-              ),
-            ),
-          ),
         ],
       ),
+    ),
     );
   }
 }

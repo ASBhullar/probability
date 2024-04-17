@@ -11,20 +11,23 @@ class wheel_example extends StatelessWidget {
   const wheel_example({Key? key});
 
   @override
-  Widget build(BuildContext context) {
-    final Size screenSize = MediaQuery.of(context).size;
-    return Container(
-      width: screenSize.width,
-      height: screenSize.height,
-      clipBehavior: Clip.hardEdge,
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          colors: [
-            Color(0xFF7745E2),
-            Color(0x007745E2)
-          ], // colour of background
-        ),
+Widget build(BuildContext context) {
+  final Size screenSize = MediaQuery.of(context).size;
+  return Container(
+    width: screenSize.width,
+    height: screenSize.height,
+    clipBehavior: Clip.hardEdge,
+    decoration: const BoxDecoration(
+      gradient: LinearGradient(
+        colors: [
+          Color(0xFF7745E2),
+          Color(0x007745E2)
+        ], // colour of background
       ),
+    ),
+    child: SizedBox(
+      // width: double.infinity,
+      // height: double.infinity,
       child: Stack(
         children: [
           //home image
@@ -43,8 +46,8 @@ class wheel_example extends StatelessWidget {
                 height: screenSize.height * 0.044,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: FileImage(File(
-                        "assets/images/firebaseImages/uploads_images_VLycwtx8L8la6K4YYSH8_8e41733af163909d6944dac1c628ba81.png")),
+                    image: FileImage(
+                        File("assets/images/firebaseImages/homeba81.png")),
                     fit: BoxFit.contain,
                   ),
                 ),
@@ -67,8 +70,8 @@ class wheel_example extends StatelessWidget {
                 height: screenSize.height * 0.043,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: FileImage(File(
-                        "assets/images/firebaseImages/uploads_images_VLycwtx8L8la6K4YYSH8_7f9a6946b79a5f10106b07e7024beaf5.png")),
+                    image: FileImage(
+                        File("assets/images/firebaseImages/backbeaf5.png")),
                     fit: BoxFit.contain,
                   ),
                 ),
@@ -91,21 +94,19 @@ class wheel_example extends StatelessWidget {
                 height: screenSize.height * 0.046,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: FileImage(File(
-                        "assets/images/firebaseImages/uploads_images_VLycwtx8L8la6K4YYSH8_baae1378b31042b9a1c6751db15bf804.png")),
+                    image: FileImage(
+                        File("assets/images/firebaseImages/home804.png")),
                     fit: BoxFit.scaleDown,
                   ),
                 ),
               ),
             ),
           ),
-          //TITLE
           Positioned(
-            left: screenSize.width * 0.08,
+            left: screenSize.width * 0.0,
             top: screenSize.height * 0.02,
             child: SizedBox(
-              width: screenSize.width * 0.9,
-              height: screenSize.height * 0.3,
+              width: 896,
               child: Text(
                 'SPINNING WHEEL',
                 textAlign: TextAlign.center,
@@ -113,119 +114,107 @@ class wheel_example extends StatelessWidget {
                   color: Colors.black.withOpacity(0.8),
                   fontSize: 64,
                   fontFamily: 'Roboto',
-                  fontWeight: FontWeight.w800,
-                  height: 0,
-                  letterSpacing: 6.40,
+                  // fontWeight: FontWeight.w800,
+                  // letterSpacing: 6.40,
                 ),
               ),
             ),
           ),
-          //image of wheel
+          //dice gif
           Positioned(
-            left: screenSize.width * 0.03,
-            top: screenSize.height * 0.15,
+            left: screenSize.width * 0.01,
+            top: screenSize.height * 0.1,
             child: Container(
-              width: screenSize.width * 0.4,
-              height: screenSize.height * 0.35,
+              width: screenSize.width * 0.45,
+              height: screenSize.height * 0.4,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: FileImage(File("images/dice gif.gif")),
+                  image: AssetImage('assets/images/allcolour.jpg'),
                   fit: BoxFit.fill,
                 ),
               ),
             ),
           ),
-          // 2 images
           Positioned(
-            left: screenSize.width * 0.03,
-            top: screenSize.height * 0.55,
+            left: screenSize.width * 0.0,
+            top: screenSize.height * 0.59,
             child: Container(
-              width: screenSize.width * 0.96,
-              height: screenSize.height * 0.54,
+              width: screenSize.width * 70,
+              height: screenSize.height * 29,
               child: Stack(
                 children: [
                   Positioned(
-                    left: screenSize.width * 0.0,
-                    top: screenSize.height * 0,
-                    child: Container(
-                      width: screenSize.width * 0.2,
-                      height: screenSize.height * 0.1,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: FileImage(File(
-                              "images/WhatsApp Image 2024-03-13 at 00.44.03_4f2b2670.jpg")),
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    left: screenSize.width * 0.25,
-                    top: screenSize.height * 0,
-                    child: Container(
-                      width: screenSize.width * 0.2,
-                      height: screenSize.height * 0.1,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: FileImage(File(
-                              "images/WhatsApp Image 2024-03-13 at 00.44.03_45e829dc.jpg")),
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    left: 0.0,
-                    top: screenSize.height * 0.12,
+                    left: screenSize.width * 0.2,
+                    top: 0,
                     child: SizedBox(
-                      width: screenSize.width * 0.57,
-                      height: screenSize.height * 0.3,
+                      width: screenSize.width * 1.38,
+                      height: screenSize.height * 0.5,
                       child: Text(
-                        'FAVORABLE OUTCOMES',
+                        '2',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 32,
+                          fontSize: 60,
                           fontFamily: 'Roboto',
                           fontWeight: FontWeight.w400,
                           height: 0,
-                          letterSpacing: 3.20,
+                          letterSpacing: 48,
                         ),
                       ),
                     ),
                   ),
                   Positioned(
-                    left: screenSize.width * 0.08,
-                    top: screenSize.height * 0.4,
+                    left: screenSize.width * 0.84,
+                    top: screenSize.height * 0.25,
                     child: SizedBox(
-                      width: screenSize.width * 0.48,
-                      height: screenSize.height * 0.78,
+                      width: screenSize.width * 0.13,
+                      height: screenSize.height * 0.19,
+                      child: Text(
+                        '8',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 60,
+                          fontFamily: 'Roboto',
+                          fontWeight: FontWeight.w400,
+                          height: 0,
+                          letterSpacing: 48,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: screenSize.width * 0.02,
+                    top: screenSize.height * 0.34,
+                    child: SizedBox(
+                      width: screenSize.width * 0.5,
+                      height: screenSize.height * 0.19,
                       child: Text(
                         'TOTAL OUTCOMES',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 36,
+                          fontSize: 30,
                           fontFamily: 'Roboto',
                           fontWeight: FontWeight.w400,
                           height: 0,
-                          letterSpacing: 3.60,
+                          letterSpacing: 6,
                         ),
                       ),
                     ),
                   ),
                   Positioned(
-                    left: screenSize.width * 0.87,
-                    top: screenSize.height * 0.08,
+                    left: screenSize.width * 0.8,
+                    top: screenSize.height * 0.05,
                     child: SizedBox(
-                      width: screenSize.width * 0.2,
-                      height: screenSize.height * 0.6,
+                      width: screenSize.width * 0.13,
+                      height: screenSize.height * 0.19,
                       child: Text(
                         '-',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 228,
+                          fontSize: 128,
                           fontFamily: 'Luckiest Guy',
                           fontWeight: FontWeight.w400,
                           height: 0,
@@ -235,91 +224,116 @@ class wheel_example extends StatelessWidget {
                     ),
                   ),
                   Positioned(
-                    left: screenSize.width * 0.85,
-                    top: screenSize.height * 0.291,
+                    left: screenSize.width * 0.35,
+                    top: screenSize.height * 0.05,
                     child: SizedBox(
-                      width: screenSize.width * 0.127,
-                      height: screenSize.height * 0.110,
+                      width: screenSize.width * 0.7,
+                      height: screenSize.height * 0.1,
                       child: Text(
-                        '8',
+                        '=',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 94,
-                          fontFamily: 'Roboto',
+                          fontSize: 128,
+                          fontFamily: 'Luckiest Guy',
                           fontWeight: FontWeight.w400,
                           height: 0,
-                          letterSpacing: 75.20,
+                          letterSpacing: 1.28,
                         ),
                       ),
                     ),
                   ),
-                  //complete wheel picture
                   Positioned(
-                    left: screenSize.width * 0.17,
-                    top: screenSize.height * 0.18,
+                    left: screenSize.width * 0.0,
+                    top: screenSize.height * 0.1,
+                    child: SizedBox(
+                      width: screenSize.width*0.5 ,
+                      height: screenSize.height * 0.1,
+                      child: Text(
+                        'FAVORABLE OUTCOMES',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 30,
+                          fontFamily: 'Roboto',
+                          fontWeight: FontWeight.w400,
+                          height: 0,
+                          letterSpacing: 6,
+                        ),
+                      ),
+                    ),
+                  ),
+                  // all dice pics
+                  Positioned(
+                    left: screenSize.width * 0.02,
+                    top: screenSize.height * 0.17,
                     child: Container(
-                      width: screenSize.width * 0.2,
-                      height: screenSize.height * 0.2,
+                      width: screenSize.width * 0.5,
+                      height: screenSize.height * 0.15,
                       decoration: BoxDecoration(
                         image: DecorationImage(
-                          image: FileImage(File(
-                              "images/WhatsApp Image 2024-03-13 at 00.44.04_26bbdd5f.jpg")),
+                          image: AssetImage('assets/images/allcolour.jpg'),
                           fit: BoxFit.fill,
                         ),
                       ),
                     ),
                   ),
+                  // blue
                   Positioned(
-                    left: screenSize.width * 0.83,
-                    top: screenSize.height * 0.05,
-                    child: SizedBox(
-                      width: screenSize.width * 0.05,
-                      height: screenSize.height * 0.15,
-                      child: Text(
-                        '2',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 94,
-                          fontFamily: 'Roboto',
-                          fontWeight: FontWeight.w400,
-                          height: 0,
-                          letterSpacing: 75.20,
+                    left: screenSize.width * 0.02,
+                    top: screenSize.height * 0.0,
+                    child: Container(
+                      width: screenSize.width * 0.1,
+                      height: screenSize.height * 0.1,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage('assets/images/blue.jpg'),
+                          fit: BoxFit.fill,
                         ),
                       ),
                     ),
                   ),
+                  //red
+                  Positioned(
+                    left: screenSize.width * 0.3,
+                    top: screenSize.height * 0.0,
+                    child: Container(
+                      width: screenSize.width * 0.1,
+                      height: screenSize.height * 0.1,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage('assets/images/red.jpg'),
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                    ),
+                  ),
+
                 ],
               ),
             ),
           ),
+          //the huge box
           Positioned(
-            left: screenSize.width * 0.5,
-            top: screenSize.height * 0.25,
-            child: SizedBox(
-              width: screenSize.width * 0.5,
-              height: screenSize.height * 0.35,
-              child: Text(
-                'WHAT IS THE PROBABILITY OF GETTING BLUE AND RED',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 40,
-                  fontFamily: 'Roboto',
-                  fontWeight: FontWeight.w700,
-                  height: 0,
-                  letterSpacing: 4,
+            left: screenSize.width * 0.01,
+            top: screenSize.height * 0.53,
+            child: Container(
+              width: screenSize.width * 0.97,
+              height: screenSize.height * 0.45,
+              decoration: ShapeDecoration(
+                shape: RoundedRectangleBorder(
+                  side: BorderSide(width: 3, color: Colors.white),
                 ),
               ),
             ),
           ),
+          //the monopoly box
           Positioned(
-            left: screenSize.width * 0.5,
-            top: screenSize.height * 0.15,
+            left: screenSize.width * 0.45,
+            top: screenSize.height * 0.1,
             child: Container(
               width: screenSize.width * 0.5,
-              height: screenSize.height * 0.35,
+              height: screenSize.height * 0.4,
               decoration: ShapeDecoration(
                 shape: RoundedRectangleBorder(
                   side: BorderSide(width: 3, color: Colors.white),
@@ -328,22 +342,29 @@ class wheel_example extends StatelessWidget {
             ),
           ),
           Positioned(
-            left: 30,
-            top: 0,
-            child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 10),
-              clipBehavior: Clip.antiAlias,
-              decoration: BoxDecoration(),
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [],
+            left: screenSize.width * 0.45,
+            top: screenSize.height * 0.2,
+            child: SizedBox(
+              width: screenSize.width * 0.5,
+              height: screenSize.height * 0.2,
+              child: Text(
+                'WHAT IS PROBABILITY OF GETTING RED AND BLUE ',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 36,
+                  fontFamily: 'Roboto',
+                  fontWeight: FontWeight.w400,
+                  height: 0,
+                  letterSpacing: 3.60,
+                ),
               ),
             ),
           ),
         ],
       ),
-    );
-  }
+    ),
+  );
 }
+}
+

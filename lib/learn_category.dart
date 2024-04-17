@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:probability/dicenew.dart';
 import 'package:probability/home_page.dart';
 import 'package:probability/wheel_example.dart';
 import 'dart:io';
