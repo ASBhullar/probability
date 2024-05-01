@@ -54,16 +54,38 @@ dev_dependencies:
 flutter:
   assets:
     - assets/images/color.gif
+    - assets/images/alldice.png
+    - assets/images/download red.png
+    - assets/images/blue blur.png
+    - assets/images/wheelblur.png
+    - assets/images/blurthowdice.png
+    - assets/images/officialdicegif.gif
+    - assets/images/boydiceblurr.png
+    - assets/images/boyalldice.png
+    - assets/images/allblurkids.png
+    - assets/images/flipcoin.png
+    - assets/images/headtail.png
+    - assets/images/flipcoin2.png
+    - assets/images/girlcoin.png
+    - assets/images/head.png
+    - assets/images/rhomeiconblurr.png
+    - assets/images/4blur.png
     - assets/images/thinking2.gif
     - assets/images/avatar.png
     - assets/textdata/profile_data.txt
     - assets/images/dice gif.gif
     - assets/images/6DICE.jpg
     - assets/images/DICEGIF.png
+    - assets/images/likelyf.jpg
+    - assets/images/img.png
+    - assets/images/img_1.png
+    - assets/images/boyjumpspinning.png
+    - assets/images/spinningwheel.png
     - assets/images/all6dice.jpg
     - assets/images/allcolour.jpg
     - assets/images/blue.jpg
     - assets/images/red.jpg
+    - assets/images/Probability-Line.png
     - assets/images/firebaseImages/backbeaf5.png
     - assets/images/firebaseImages/colorwheel.png
     - assets/images/firebaseImages/dices2Image.png

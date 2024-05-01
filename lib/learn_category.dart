@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:probability/dicenew.dart';
+import 'package:probability/coin_example.dart';
 import 'package:probability/home_page.dart';
+import 'package:probability/likely.dart';
 import 'package:probability/wheel_example.dart';
 import 'dart:io';
 import 'dice_example.dart';
@@ -12,7 +13,8 @@ class LearnCategories extends StatelessWidget {
   Widget build(BuildContext context) {
     final Size screenSize = MediaQuery.of(context).size;
 
-    return Container(
+    return Scaffold(
+      body: Container(
       width: screenSize.width,
       height: screenSize.height,
       clipBehavior: Clip.hardEdge,
@@ -161,6 +163,13 @@ class LearnCategories extends StatelessWidget {
             Positioned(
               left: screenSize.width * 0.663,
               top: screenSize.height * 0.433,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => likely()),
+                  );
+                },
               child: Container(
                 width: screenSize.width * 0.250,
                 height: screenSize.height * 0.250,
@@ -172,10 +181,18 @@ class LearnCategories extends StatelessWidget {
                   ),
                 ),
               ),
+              ),
             ),
             Positioned(
               left: screenSize.width * 0.119,
               top: screenSize.height * 0.669,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => coin_example()),
+                  );
+                },
               child: Container(
                 width: screenSize.width * 0.250,
                 height: screenSize.height * 0.250,
@@ -186,6 +203,7 @@ class LearnCategories extends StatelessWidget {
                     fit: BoxFit.scaleDown,
                   ),
                 ),
+              ),
               ),
             ),
             //DICE
@@ -229,6 +247,7 @@ class LearnCategories extends StatelessWidget {
             )
           ],
         ),
+      ),
       ),
     );
   }
