@@ -117,6 +117,13 @@ class coin2 extends StatelessWidget {
               Positioned(
                 left: screenSize.width * 0.02,
                 top: screenSize.height * 0.2,
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => coin_example()),
+                    );
+                  },
                 child: Container(
                   width: screenSize.width * 0.95,
                   height: screenSize.height * 0.7,
@@ -125,6 +132,7 @@ class coin2 extends StatelessWidget {
                       side: BorderSide(width: 3, color: Colors.white),
                       borderRadius: BorderRadius.circular(50),
                     ),
+                  ),
                   ),
                 ),
               ),

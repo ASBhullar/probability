@@ -120,6 +120,13 @@ class dice22 extends StatelessWidget {
             Positioned(
               left: screenSize.width * 0.02,
               top: screenSize.height * 0.2,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => dice_example2()),
+                  );
+                },
               child: Container(
                 width: screenSize.width * 0.95,
                 height: screenSize.height * 0.7,
@@ -129,6 +136,7 @@ class dice22 extends StatelessWidget {
                     borderRadius: BorderRadius.circular(50),
                   ),
                 ),
+              ),
               ),
             ),
             Positioned(
