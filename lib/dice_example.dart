@@ -140,7 +140,7 @@ class dice_example extends StatelessWidget {
               'https://firebasestorage.googleapis.com/v0/b/codeless-app.appspot.com/o/projects%2FnpsHWJMQeMQ31iFisae4%2Fb142575b6dd3a42be613430a6c9517673117c0aagirldiceblur.png?alt=media&token=565759d5-b58a-4efd-a2d7-be46003cf555',
               width: screenSize.width*0.25,
               height: screenSize.height*0.3,
-              fit: BoxFit.cover,
+              // fit: BoxFit.cover,
             ),
           ),
       //group
@@ -151,7 +151,7 @@ class dice_example extends StatelessWidget {
             'https://firebasestorage.googleapis.com/v0/b/codeless-app.appspot.com/o/projects%2FnpsHWJMQeMQ31iFisae4%2F80e32afac70562556f157aceabaad3b024c2bf0fallkidsblr.png?alt=media&token=5462ce87-6644-446c-a25d-00f9a1903689',
             width: screenSize.width*0.3,
             height: screenSize.height*0.2,
-            fit: BoxFit.cover,
+            // fit: BoxFit.cover,
           ),
         ),
           // //mainpic

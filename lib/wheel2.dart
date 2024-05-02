@@ -231,7 +231,7 @@ class wheel2 extends StatelessWidget {
               top: screenSize.height * 0.45,
               child: SizedBox(
                 width: screenSize.width * 0.7,
-                height: screenSize.height * 0.2,
+                height: screenSize.height * 0.3,
                 child: Text(
                   '=',
                   textAlign: TextAlign.center,
