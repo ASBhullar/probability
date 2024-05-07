@@ -612,8 +612,11 @@ import 'package:probability/learn_category.dart';
 import 'package:probability/likely.dart';
 import 'package:probability/play_category.dart';
 import 'package:probability/profilepage.dart'; // Import the ProfilePage class
+import 'package:probability/learn_percentages.dart';
+
 import 'dart:io';
 import 'dart:math';
+
 
 class Homepage extends StatelessWidget {
   const Homepage({Key? key});
@@ -797,6 +800,7 @@ class Homepage extends StatelessWidget {
                                 },
                                 child: Text("Advanced"),
                               ),
+
                             ],
                           );
                         },
@@ -832,8 +836,12 @@ class Homepage extends StatelessWidget {
                             context: context,
                             builder: (BuildContext context) {
                               return AlertDialog(
-                                title: Text("Learn Options"),
-                                content: Text("Choose a learning category"),
+                                title: Text("Learn Options", style: TextStyle(fontSize: 24.0,
+                                  color: Colors.blue,
+                                  fontWeight: FontWeight.bold,),),
+                                content: Text("Choose a learning category", style: TextStyle(fontSize: 20.0,
+                                  color: Colors.blue,
+                                  fontWeight: FontWeight.bold,),),
                                 actions: [
                                   TextButton(
                                     onPressed: () {
@@ -842,7 +850,20 @@ class Homepage extends StatelessWidget {
                                         MaterialPageRoute(builder: (context) => likely()),
                                       );
                                     },
-                                    child: Text("Beginner"),
+                                    child: Text("Beginner", style: TextStyle(fontSize: 18.0,
+                                      color: Colors.purple,
+                                      fontWeight: FontWeight.bold,),),
+                                  ),
+                                  TextButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(builder: (context) => LearnFractionToPercentage()),
+                                      );
+                                    },
+                                    child: Text("Intermediate", style: TextStyle(fontSize: 18.0,
+                                      color: Colors.purple,
+                                      fontWeight: FontWeight.bold,),),
                                   ),
                                   TextButton(
                                     onPressed: () {
@@ -851,7 +872,9 @@ class Homepage extends StatelessWidget {
                                         MaterialPageRoute(builder: (context) => LearnCategories()),
                                       );
                                     },
-                                    child: Text("Advanced"),
+                                    child: Text("Advanced", style: TextStyle(fontSize: 18.0,
+                                      color: Colors.purple,
+                                      fontWeight: FontWeight.bold,),),
                                   ),
                                 ],
                               );
