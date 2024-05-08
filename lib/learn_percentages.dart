@@ -259,7 +259,7 @@ class _LearnFractionToPercentageState extends State<LearnFractionToPercentage> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    'Enter sum of favorable outcomes (Numerator)',
+                    'Insert Total Favorable Outcomes (Numerator)',
                     style: TextStyle(
                       fontSize: 16.0,
                       color: Color(0xFF003049),
@@ -274,7 +274,7 @@ class _LearnFractionToPercentageState extends State<LearnFractionToPercentage> {
                   ),
                   SizedBox(height: 20.0),
                   Text(
-                    'Enter total possible outcomes (Denominator):',
+                    'Insert Total Possible Outcomes (Denominator):',
                     style: TextStyle(
                       fontSize: 16.0,
                       color: Color(0xFF003049),

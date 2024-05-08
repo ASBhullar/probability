@@ -28,7 +28,7 @@ class _FractionGameState extends State<FractionGame> {
   @override
   void initState() {
     super.initState();
-    _confettiController = ConfettiController(duration: Duration(seconds: 2));
+    _confettiController = ConfettiController(duration: Duration(seconds: 3));
     _generateFractionExplanation();
   }
 
