@@ -206,7 +206,7 @@ class _LearnFractionToPercentageState extends State<LearnFractionToPercentage> {
             },
             child: Card(
               elevation: 3.0,
-              color: Color(0xFFFFE194), // Background color for flip card
+              color: Color(0xFF003049), // Background color for flip card
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Column(
@@ -215,11 +215,11 @@ class _LearnFractionToPercentageState extends State<LearnFractionToPercentage> {
                     Text(
                       isFlipped
                           ? 'Percentage = (Numerator / Denominator) * 100 \n i.e Multiply the Probability Fraction by 100 '
-                          : 'Tap to see the FORMULA!',
+                          : 'View FORMULA!',
                       style: TextStyle(
                         fontSize: 20.0,
                         fontWeight: FontWeight.bold,
-                        color: Color(0xFF78290F),
+                        color: Colors.white,
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -246,7 +246,7 @@ class _LearnFractionToPercentageState extends State<LearnFractionToPercentage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                'Enter a probability of your choice',
+                'Insert a Probability Fraction',
                 style: TextStyle(
                   fontSize: 20.0,
                   fontWeight: FontWeight.bold,
@@ -337,7 +337,7 @@ class _LearnFractionToPercentageState extends State<LearnFractionToPercentage> {
 
   Widget _buildCalculationResultSection() {
     return Card(
-      color:Color(0xFF78290F),
+      color:Color(0xFF003049),
       elevation: 3.0,
       margin: EdgeInsets.all(10.0),
       child: Padding(
@@ -348,9 +348,9 @@ class _LearnFractionToPercentageState extends State<LearnFractionToPercentage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Calculation Explanation:',
+                'Calculation Explanation',
                 style: TextStyle(
-                  fontSize: 25.0,
+                  fontSize: 24.0,
                   fontWeight: FontWeight.bold,
                   color:  Colors.white,
                 ),
@@ -359,7 +359,7 @@ class _LearnFractionToPercentageState extends State<LearnFractionToPercentage> {
               Text(
                 calculationExplanation,
                 style: TextStyle(
-                  fontSize: 16.0,
+                  fontSize: 20.0,
                   color:  Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
@@ -368,14 +368,14 @@ class _LearnFractionToPercentageState extends State<LearnFractionToPercentage> {
               Text(
                 'Percentage:',
                 style: TextStyle(
-                  fontSize: 16.0,
+                  fontSize: 20.0,
                   color:  Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               SizedBox(height: 10.0),
               Text(
-                percentage + "\n\n There is a " + percentage + " chance!!",
+                percentage + "\n\nThere is a " + percentage + " chance!!",
                 style: TextStyle(
                   fontSize: 25.0,
                   color:  Colors.white,

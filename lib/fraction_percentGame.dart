@@ -97,7 +97,7 @@ class _FractionGameState extends State<FractionGame> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Express Probability with Percentage',
+          'Practice Probability with Percentage %',
           style: TextStyle(
             fontSize: 24.0,
             fontWeight: FontWeight.bold,
