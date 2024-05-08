@@ -837,10 +837,10 @@ class Homepage extends StatelessWidget {
                             builder: (BuildContext context) {
                               return AlertDialog(
                                 title: Text("Learn Options", style: TextStyle(fontSize: 24.0,
-                                  color: Colors.blue,
+                                  color: Colors.purple,
                                   fontWeight: FontWeight.bold,),),
                                 content: Text("Choose a learning category", style: TextStyle(fontSize: 20.0,
-                                  color: Colors.blue,
+                                  color: Colors.purple,
                                   fontWeight: FontWeight.bold,),),
                                 actions: [
                                   TextButton(

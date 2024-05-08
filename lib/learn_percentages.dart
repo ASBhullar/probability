@@ -30,7 +30,7 @@ class _LearnFractionToPercentageState extends State<LearnFractionToPercentage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Let\'s Understand Probability using Percentages %',
+          'Using Percentages % for Probability',
           style: TextStyle(color: Colors.white),
         ),
         backgroundColor: Color(0xFF003049),
@@ -105,7 +105,7 @@ class _LearnFractionToPercentageState extends State<LearnFractionToPercentage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
-              'Interpretation of Probability with Percentages',
+              'Build your probability intuition with Percentages %',
               style: TextStyle(
                 fontSize: 20.0,
                 fontWeight: FontWeight.bold,
@@ -246,7 +246,7 @@ class _LearnFractionToPercentageState extends State<LearnFractionToPercentage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                'Let\'s calculate Percentages! ',
+                'Enter a probability of your choice',
                 style: TextStyle(
                   fontSize: 20.0,
                   fontWeight: FontWeight.bold,
@@ -309,7 +309,7 @@ class _LearnFractionToPercentageState extends State<LearnFractionToPercentage> {
                         });
                       },
                       child: Text(
-                        'Calculate Percentage',
+                        'View % chance',
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,

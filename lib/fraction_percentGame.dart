@@ -97,7 +97,7 @@ class _FractionGameState extends State<FractionGame> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Practicing PROBABILITY in PERCENTAGES %',
+          'Express Probability with Percentage',
           style: TextStyle(
             fontSize: 24.0,
             fontWeight: FontWeight.bold,
@@ -139,7 +139,7 @@ class _FractionGameState extends State<FractionGame> {
               ),
               SizedBox(height: 30.0),
               Text(
-                'The probability of occurrence of an event is ${_fractions[_currentFractionIndex][0]}/${_fractions[_currentFractionIndex][1]}. There is a _____% chance that the event will happen. Find the percentage.',
+                'The probability of occurrence of an event is ${_fractions[_currentFractionIndex][0]}/${_fractions[_currentFractionIndex][1]}. There is a _____% chance that the event will happen. Calculate the probability in %.',
                 style: TextStyle(
                   fontSize: 24.0,
                   color: Colors.black87,
