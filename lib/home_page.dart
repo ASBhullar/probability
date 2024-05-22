@@ -608,6 +608,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:probability/beginnersolve.dart';
+import 'package:probability/beginnersolve3.dart';
 import 'package:probability/learn_category.dart';
 import 'package:probability/likely.dart';
 import 'package:probability/play_category.dart';
@@ -836,12 +838,8 @@ class Homepage extends StatelessWidget {
                             context: context,
                             builder: (BuildContext context) {
                               return AlertDialog(
-                                title: Text("Learn Options", style: TextStyle(fontSize: 24.0,
-                                  color: Colors.purple,
-                                  fontWeight: FontWeight.bold,),),
-                                content: Text("Choose a learning category", style: TextStyle(fontSize: 20.0,
-                                  color: Colors.purple,
-                                  fontWeight: FontWeight.bold,),),
+                                title: Text("Learn Options"),
+                                content: Text("Choose a category"),
                                 actions: [
                                   TextButton(
                                     onPressed: () {
@@ -850,20 +848,7 @@ class Homepage extends StatelessWidget {
                                         MaterialPageRoute(builder: (context) => likely()),
                                       );
                                     },
-                                    child: Text("Beginner", style: TextStyle(fontSize: 18.0,
-                                      color: Colors.purple,
-                                      fontWeight: FontWeight.bold,),),
-                                  ),
-                                  TextButton(
-                                    onPressed: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(builder: (context) => LearnFractionToPercentage()),
-                                      );
-                                    },
-                                    child: Text("Intermediate", style: TextStyle(fontSize: 18.0,
-                                      color: Colors.purple,
-                                      fontWeight: FontWeight.bold,),),
+                                    child: Text("Beginner"),
                                   ),
                                   TextButton(
                                     onPressed: () {
@@ -872,10 +857,18 @@ class Homepage extends StatelessWidget {
                                         MaterialPageRoute(builder: (context) => LearnCategories()),
                                       );
                                     },
-                                    child: Text("Advanced", style: TextStyle(fontSize: 18.0,
-                                      color: Colors.purple,
-                                      fontWeight: FontWeight.bold,),),
+                                    child: Text("Intermediate"),
                                   ),
+                                  TextButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(builder: (context) => LearnFractionToPercentage()),
+                                      );
+                                    },
+                                    child: Text("Advanced"),
+                                  ),
+
                                 ],
                               );
                             },
@@ -927,6 +920,8 @@ class Homepage extends StatelessWidget {
           ),
           ),
 
+
+
           Positioned(
             left: screenSize.width *0.6,
             top: screenSize.height *0.84,
@@ -935,10 +930,50 @@ class Homepage extends StatelessWidget {
               height: screenSize.height*0.17,
               child: GestureDetector(
                 onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => PLayCategories()),
+                  showDialog(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return AlertDialog(
+                        title: Text("Solve Options"),
+                        content: Text("Choose a category"),
+                        actions: [
+                          TextButton(
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => Beginnersolve()),
+                              );
+                            },
+                            child: Text("Practice"),
+                          ),
+
+                          TextButton(
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => Beginnersolve3()),
+                              );
+                            },
+                            child: Text("Beginner"),
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => LearnCategories()),
+                              );
+                            },
+                            child: Text("Advanced"),
+                          ),
+
+                        ],
+                      );
+                    },
                   );
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(builder: (context) => LearnCategories()),
+                  // );
                 },
               child: Text(
                 'SOLVE',

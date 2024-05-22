@@ -99,6 +99,19 @@ flutter:
     - assets/images/firebaseImages/imageOfBalls.png
     - assets/images/firebaseImages/trainglecolorballs.png
     - assets/images/firebaseImages/wheel.png
+    - assets/images/emptyjar.png
+    - assets/images/2applejar.png
+    - assets/images/2bananajar.png
+    - assets/images/oneapplejar.png
+    - assets/images/3app1bajar.png
+    - assets/images/3app1bajar.png
+    - assets/images/3applejar.png
+    - assets/images/1a1b1m.png
+    - assets/images/1mango.png
+    - assets/images/2apple1mango.png
+    - assets/images/2mango.png
+    - assets/images/bigjar.png
+    - assets/images/hint.png
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

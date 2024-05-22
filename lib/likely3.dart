@@ -5,6 +5,7 @@ import 'package:probability/dice_example2.dart';
 import 'package:probability/learn_category.dart';
 import 'package:probability/likely.dart';
 import 'package:probability/likely2.dart';
+import 'package:probability/likely4.dart';
 import 'package:probability/play_category.dart';
 import 'package:probability/play_category.dart';
 import 'home_page.dart';
@@ -103,7 +104,7 @@ class likely3 extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => wheel_example()),
+                    MaterialPageRoute(builder: (context) => likely4()),
                   );
                 },
                 child: Container(

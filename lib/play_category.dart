@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:probability/beginnersolve.dart';
 import 'package:probability/home_page.dart';
 import 'ColorSelect_Solve.dart';
 import 'dart:io';
@@ -140,6 +141,15 @@ class PLayCategories extends StatelessWidget {
             Positioned(
               left: screenSize.width * 0.663,
               top: screenSize.height * 0.433,
+              child: GestureDetector(
+                onTap: () {
+                  // Add your navigation logic here
+                  // For example, navigate to a new page
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Beginnersolve()),
+                  );
+                },
               child: Container(
                 width: screenSize.width * 0.250,
                 height: screenSize.height * 0.250,
@@ -150,6 +160,7 @@ class PLayCategories extends StatelessWidget {
                     fit: BoxFit.scaleDown,
                   ),
                 ),
+              ),
               ),
             ),
             Positioned(
