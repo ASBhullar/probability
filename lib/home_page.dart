@@ -610,6 +610,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:probability/beginnersolve.dart';
 import 'package:probability/beginnersolve3.dart';
+import 'package:probability/connections1.dart';
 import 'package:probability/learn_category.dart';
 import 'package:probability/likely.dart';
 import 'package:probability/play_category.dart';
@@ -867,6 +868,7 @@ class Homepage extends StatelessWidget {
                                       );
                                     },
                                     child: Text("Advanced"),
+
                                   ),
 
                                 ],
@@ -960,7 +962,7 @@ class Homepage extends StatelessWidget {
                             onPressed: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => LearnCategories()),
+                                MaterialPageRoute(builder: (context) => Connections1()),
                               );
                             },
                             child: Text("Advanced"),

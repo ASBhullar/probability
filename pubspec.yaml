@@ -112,6 +112,7 @@ flutter:
     - assets/images/2mango.png
     - assets/images/bigjar.png
     - assets/images/hint.png
+    - assets/images/hintc.png
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

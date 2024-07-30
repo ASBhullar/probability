@@ -36,7 +36,7 @@ class _BeginnersolveState3 extends State<Beginnersolve3> {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        backgroundColor: Color(0xFFCAA0FF),
+        backgroundColor: Color(0xFFbaebff),
         title: Text(
           'EXPLANATION',
           style: GoogleFonts.getFont(
@@ -260,7 +260,7 @@ class _BeginnersolveState3 extends State<Beginnersolve3> {
         clipBehavior: Clip.hardEdge,
         decoration: const BoxDecoration(
         gradient: LinearGradient(
-        colors: [Color(0xFF9361C0), Color(0xFFFCAEFA)],
+        colors: [Color(0xFFbaebff), Color(0xFFc09cfa)],
     stops: [0.2, 0.9],
           transform: GradientRotation(90 * pi / 180),
     // transform: GradientRotation(90 * pi / 180),
