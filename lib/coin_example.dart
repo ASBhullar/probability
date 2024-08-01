@@ -127,7 +127,7 @@ class coin_example extends StatelessWidget {
                   decoration:const BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage('assets/images/flipcoin.png'),
-                      fit: BoxFit.fill,
+                      // fit: BoxFit.fill,
                     ),
                   ),
                 ),
@@ -141,7 +141,7 @@ class coin_example extends StatelessWidget {
                   decoration:const BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage('assets/images/girlcoin.png'),
-                      fit: BoxFit.fill,
+                      // fit: BoxFit.fill,
                     ),
                   ),
                 ),
@@ -180,7 +180,7 @@ class coin_example extends StatelessWidget {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => wheel2()),
+                        MaterialPageRoute(builder: (context) => coin2()),
                       );
                     },
                     child: Text(

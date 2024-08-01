@@ -613,7 +613,6 @@ import 'package:probability/beginnersolve3.dart';
 import 'package:probability/connections1.dart';
 import 'package:probability/learn_category.dart';
 import 'package:probability/likely.dart';
-import 'package:probability/play_category.dart';
 import 'package:probability/profilepage.dart'; // Import the ProfilePage class
 import 'package:probability/learn_percentages.dart';
 
@@ -801,6 +800,15 @@ class Homepage extends StatelessWidget {
                                     MaterialPageRoute(builder: (context) => LearnCategories()),
                                   );
                                 },
+                                child: Text("Intermediate"),
+                              ),
+                              TextButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(builder: (context) => LearnFractionToPercentage()),
+                                  );
+                                },
                                 child: Text("Advanced"),
                               ),
 
@@ -808,10 +816,6 @@ class Homepage extends StatelessWidget {
                           );
                         },
                       );
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(builder: (context) => LearnCategories()),
-                      // );
                     },
                     child: Container(
                       width: screenSize.width*0.305,
@@ -823,77 +827,24 @@ class Homepage extends StatelessWidget {
                           borderRadius: BorderRadius.circular(50),
                         ),
                       ),
+                      child: Center(
+                        child: Text(
+                          'LEARN',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Color(0xFFFFE6B6),
+                            fontSize: screenSize.width*0.05*0.8,
+                            fontWeight: FontWeight.w800,
+                            letterSpacing: screenSize.width*0.012,
+                            fontFamily: 'Roboto',
+                          ),
+                        ),
+                      ),
                     ),
                   ),
                 )
                   ),
-                   Positioned(
-                    left: screenSize.width *0.01,
-                    top: screenSize.height *0.0,
-                    child: SizedBox(
-                      width: screenSize.width*0.3,
-                      height: screenSize.height*0.09,
-                      child: GestureDetector(
-                        onTap: () {
-                          showDialog(
-                            context: context,
-                            builder: (BuildContext context) {
-                              return AlertDialog(
-                                title: Text("Learn Options"),
-                                content: Text("Choose a category"),
-                                actions: [
-                                  TextButton(
-                                    onPressed: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(builder: (context) => likely()),
-                                      );
-                                    },
-                                    child: Text("Beginner"),
-                                  ),
-                                  TextButton(
-                                    onPressed: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(builder: (context) => LearnCategories()),
-                                      );
-                                    },
-                                    child: Text("Intermediate"),
-                                  ),
-                                  TextButton(
-                                    onPressed: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(builder: (context) => LearnFractionToPercentage()),
-                                      );
-                                    },
-                                    child: Text("Advanced"),
 
-                                  ),
-
-                                ],
-                              );
-                            },
-                          );
-                   // Navigator.push(
-                   // context,
-                   // MaterialPageRoute(builder: (context) => LearnCategories()),
-                   // );
-                   },
-                        child: Text(
-                        'LEARN',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Color(0xFFFFE6B6),
-                          fontSize: screenSize.width*0.060*0.8,
-                          fontWeight: FontWeight.w800,
-                          letterSpacing: screenSize.width*0.012,
-                          fontFamily: 'Roboto',
-                        ),
-                      ),
-                    ),
-                  )
-                   ),
                 ],
               ),
             ),
@@ -903,9 +854,45 @@ class Homepage extends StatelessWidget {
             top: screenSize.height*0.84,
             child: GestureDetector(
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => PLayCategories()),
+                showDialog(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return AlertDialog(
+                      title: Text("Solve Options"),
+                      content: Text("Choose a category"),
+                      actions: [
+                        TextButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => Beginnersolve()),
+                            );
+                          },
+                          child: Text("Practice"),
+                        ),
+
+                        TextButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => Beginnersolve3()),
+                            );
+                          },
+                          child: Text("Beginner"),
+                        ),
+                        TextButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => Connections1()),
+                            );
+                          },
+                          child: Text("Advanced"),
+                        ),
+
+                      ],
+                    );
+                  },
                 );
               },
             child: Container(
@@ -918,78 +905,21 @@ class Homepage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(50),
                 ),
               ),
-            ),
-          ),
-          ),
-
-
-
-          Positioned(
-            left: screenSize.width *0.6,
-            top: screenSize.height *0.84,
-            child: SizedBox(
-              width: screenSize.width*0.290,
-              height: screenSize.height*0.17,
-              child: GestureDetector(
-                onTap: () {
-                  showDialog(
-                    context: context,
-                    builder: (BuildContext context) {
-                      return AlertDialog(
-                        title: Text("Solve Options"),
-                        content: Text("Choose a category"),
-                        actions: [
-                          TextButton(
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) => Beginnersolve()),
-                              );
-                            },
-                            child: Text("Practice"),
-                          ),
-
-                          TextButton(
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) => Beginnersolve3()),
-                              );
-                            },
-                            child: Text("Beginner"),
-                          ),
-                          TextButton(
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) => Connections1()),
-                              );
-                            },
-                            child: Text("Advanced"),
-                          ),
-
-                        ],
-                      );
-                    },
-                  );
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => LearnCategories()),
-                  // );
-                },
-              child: Text(
-                'SOLVE',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Color(0xFFFFE6B6),
-                  fontSize: screenSize.width*0.055*0.8,
-                  fontWeight: FontWeight.w800,
-                  letterSpacing: screenSize.width*0.012,
-                  fontFamily: 'Roboto',
-                ),
+              child: Center(
+                child:Text(
+              'SOLVE',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Color(0xFFFFE6B6),
+                fontSize: screenSize.width*0.05*0.8,
+                fontWeight: FontWeight.w800,
+                letterSpacing: screenSize.width*0.012,
+                fontFamily: 'Roboto',
+              ),
+            ) ,
               ),
             ),
-          )
+          ),
           ),
         ],
       ),
@@ -997,31 +927,31 @@ class Homepage extends StatelessWidget {
     );
   }
 }
-class ProfileAvatar extends StatefulWidget {
-  @override
-  _ProfileAvatarState createState() => _ProfileAvatarState();
-}
+// class ProfileAvatar extends StatefulWidget {
+//   @override
+//   _ProfileAvatarState createState() => _ProfileAvatarState();
+// }
 
-class _ProfileAvatarState extends State<ProfileAvatar> {
-  @override
-  Widget build(BuildContext context) {
-    return Positioned(
-      top: 2,
-      right: 2,
-      child: GestureDetector(
-        onTap: () {
-          // Navigate to the ProfilePage when user clicks on the image
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => ProfilePage()),
-          );
-        },
-        child: CircleAvatar(
-          radius: 10,
-          backgroundImage: AssetImage('assets/images/avatar.png'),
-        ),
-      ),
-    );
-  }
-}
+// class _ProfileAvatarState extends State<ProfileAvatar> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Positioned(
+//       top: 2,
+//       right: 2,
+//       child: GestureDetector(
+//         onTap: () {
+//           // Navigate to the ProfilePage when user clicks on the image
+//           Navigator.push(
+//             context,
+//             MaterialPageRoute(builder: (context) => ProfilePage()),
+//           );
+//         },
+//         child: CircleAvatar(
+//           radius: 10,
+//           backgroundImage: AssetImage('assets/images/avatar.png'),
+//         ),
+//       ),
+//     );
+//   }
+// }
 

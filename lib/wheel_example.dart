@@ -517,7 +517,7 @@ class wheel_example extends StatelessWidget {
                 decoration:const BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage('assets/images/boyjumpspinning.png'),
-                    fit: BoxFit.fill,
+                    // fit: BoxFit.fill,
                   ),
                 ),
               ),
@@ -531,7 +531,7 @@ class wheel_example extends StatelessWidget {
                 decoration:const BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage('assets/images/wheelblur.png'),
-                    fit: BoxFit.fill,
+                    // fit: BoxFit.fill,
                   ),
                 ),
               ),

@@ -3,7 +3,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:probability/dice22.dart';
 import 'package:probability/dice_example.dart';
 import 'package:probability/learn_category.dart';
-import 'package:probability/play_category.dart';
 import 'home_page.dart';
 import 'package:probability/wheel_example.dart';
 import 'dart:math';
@@ -101,7 +100,7 @@ class dice_example2 extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => PLayCategories()),
+                    MaterialPageRoute(builder: (context) => dice_example2()),
                   );
                 },
                 child: Container(
@@ -125,7 +124,7 @@ class dice_example2 extends StatelessWidget {
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage('assets/images/boydiceblurr.png'),
-                    fit: BoxFit.fill,
+                    // fit: BoxFit.fill,
                   ),
                 ),
               ),
@@ -139,7 +138,7 @@ class dice_example2 extends StatelessWidget {
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage('assets/images/boyalldice.png'),
-                    fit: BoxFit.fill,
+                    // fit: BoxFit.fill,
                   ),
                 ),
               ),

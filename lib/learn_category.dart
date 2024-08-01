@@ -113,29 +113,7 @@ class LearnCategories extends StatelessWidget {
               ),
             ),
             //NEXT
-            Positioned(
-              left: screenSize.width * 0.921,
-              top: screenSize.height * 0.923,
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => wheel_example()),
-                  );
-                },
-                child: Container(
-                  width: screenSize.width * 0.061,
-                  height: screenSize.height * 0.046,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage(
-                          "assets/images/firebaseImages/home804.png"),
-                      fit: BoxFit.scaleDown,
-                    ),
-                  ),
-                ),
-              ),
-            ),
+
             //wheel
             Positioned(
               left: screenSize.width * 0.119,

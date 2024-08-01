@@ -43,6 +43,7 @@ class _BeginnersolveState3 extends State<Beginnersolve3> {
             'Calistoga',
             fontSize: 20,
             fontWeight: FontWeight.bold,
+
           ),
         ),
         content: Column(
@@ -166,7 +167,7 @@ class _BeginnersolveState3 extends State<Beginnersolve3> {
         feedbackMessage = 'BETTER LUCK NEXT TIME';
         feedbackStyle = GoogleFonts.getFont(
           'Calistoga',
-          color: Colors.orange,
+          color: Colors.blueAccent,
           fontSize: 18,
           fontWeight: FontWeight.bold,
         );
@@ -187,14 +188,6 @@ class _BeginnersolveState3 extends State<Beginnersolve3> {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(15),
         ),
-          title: Text(
-            'ROUND 1: ',
-            style: GoogleFonts.getFont(
-              'Calistoga',
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
           content: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -203,6 +196,7 @@ class _BeginnersolveState3 extends State<Beginnersolve3> {
                 style: GoogleFonts.getFont(
                   'Calistoga',
                   fontSize: 16,
+                  color:  Color(0xFFc09cfa),
                 ),
               ),
               SizedBox(height: 10),
@@ -223,6 +217,7 @@ class _BeginnersolveState3 extends State<Beginnersolve3> {
                   'Calistoga',
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
+                   color:   Color(0xFFc09cfa),
                 ),
               ),
             ),
@@ -241,6 +236,7 @@ class _BeginnersolveState3 extends State<Beginnersolve3> {
                   'Calistoga',
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
+                  color:  Color(0xFFc09cfa),
                 ),
               ),
             ),
@@ -349,7 +345,7 @@ class _BeginnersolveState3 extends State<Beginnersolve3> {
     onTap: () {
     Navigator.push(
     context,
-    MaterialPageRoute(builder: (context) => dice_example2()),
+    MaterialPageRoute(builder: (context) =>Homepage()),
     );
     },
     child: Container(
@@ -372,7 +368,7 @@ class _BeginnersolveState3 extends State<Beginnersolve3> {
     onTap: () {
     Navigator.push(
     context,
-    MaterialPageRoute(builder: (context) => Beginnersolve2()),
+    MaterialPageRoute(builder: (context) => Homepage()),
     );
     },
     child: Container(
@@ -457,7 +453,7 @@ class _BeginnersolveState3 extends State<Beginnersolve3> {
         top: screenSize.height * 0.91,
         child: SizedBox(
           width: screenSize.width * 0.3,
-          height: screenSize.height * 0.07,
+          height: screenSize.height * 0.08,
           child: ElevatedButton(
             onPressed: selectedOption.isEmpty
                 ? null
@@ -469,15 +465,17 @@ class _BeginnersolveState3 extends State<Beginnersolve3> {
                 borderRadius: BorderRadius.circular(50),
               ),
             ),
+            child: Center(
             child: Text(
               'SUBMIT',
               style: GoogleFonts.getFont(
                 'Calistoga',
-                fontSize: screenSize.width * 0.05 * 0.8,
+                fontSize: screenSize.width * 0.045 * 0.8,
                 letterSpacing: screenSize.width * 0.012,
                 fontWeight: FontWeight.bold,
                 color: Color(0xFF9361C0),
               ),
+            ),
             ),
           ),
         ),

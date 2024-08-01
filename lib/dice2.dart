@@ -67,28 +67,7 @@ class dice2 extends StatelessWidget {
         ),
       ),
     ),
-        Positioned(
-          left: screenSize.width * 0.9,
-          top: screenSize.height * 0.94,
-          child: GestureDetector(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => dice_example2()),
-              );
-            },
-            child: Container(
-              width: screenSize.width * 0.08,
-              height: screenSize.height * 0.045,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('assets/images/firebaseImages/home804.png'),
-                  fit: BoxFit.scaleDown,
-                ),
-              ),
-            ),
-          ),
-        ),
+
     //PREVI
     Positioned(
     left: screenSize.width * 0,
@@ -145,7 +124,7 @@ class dice2 extends StatelessWidget {
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/images/blurthowdice.png'),
-                fit: BoxFit.fill,
+                // fit: BoxFit.fill,
               ),
             ),
           ),
@@ -159,162 +138,123 @@ class dice2 extends StatelessWidget {
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/images/allblurkids.png'),
-                fit: BoxFit.fill,
+                // fit: BoxFit.fill,
               ),
             ),
           ),
         ),
-    //start of the group
-    Positioned(
-      left: screenSize.width * 0.8,
-      top: screenSize.height * 0.35,
-      child: SizedBox(
-        width: screenSize.width * 0.13,
-        height: screenSize.height ,
-        child: Text(
-          '1',
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: screenSize.width*0.1,
-            fontFamily: 'Roboto',
-            fontWeight: FontWeight.bold,
+        Positioned(
+          left: screenSize.width * 0.05,  // Adjust the horizontal position
+          top: screenSize.height * 0.35,
+          // Adjust the vertical position
+          child:Row(
+            children: [
+              Column(
+                mainAxisSize: MainAxisSize.min,  // This makes the Row take up only as much space as needed
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Container(
+                    width: screenSize.width * 0.45,
+                    height: screenSize.height * 0.15,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage('assets/images/6DICE.jpg'),
+                        // fit: BoxFit.fill,
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: screenSize.width * 0.35),
+                  Text(
+                    'FAVORABLE OUTCOMES',
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.getFont(
+                      'Calistoga',
+                      color: Colors.white,
+                      fontSize: screenSize.width * 0.037 * 0.8,
+                      letterSpacing: screenSize.width * 0.012,
+                      fontWeight: FontWeight.normal,
+                    ),
+                  ),
 
-
+                  SizedBox(width: screenSize.width * 0.05),  // Add some spacing between the items if needed
+                  Container(
+                    width: screenSize.width * 0.45,
+                    height: screenSize.height * 0.15,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage('assets/images/alldice.png'),
+                        // fit: BoxFit.fill,
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: screenSize.width * 0.05),
+                  Text(
+                    'TOTAL OUTCOMES',
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.getFont(
+                      'Calistoga',
+                      color: Colors.white,
+                      fontSize:screenSize.width*0.040*0.8,
+                      letterSpacing: screenSize.width*0.012,
+                      fontWeight: FontWeight.normal,
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(width: screenSize.width * 0.02),
+              Text(
+                '=',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: screenSize.width * 0.1,
+                  fontFamily: 'Roboto',
+                  fontWeight: FontWeight.bold,
+                  height: 1,
+                  letterSpacing: 48,
+                ),
+              ),
+              Column(
+                mainAxisSize: MainAxisSize.min,  // This makes the Row take up only as much space as needed
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [Text(
+                  '1',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: screenSize.width*0.08,
+                    fontFamily: 'Roboto',
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                  Text(
+                    '-',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: screenSize.width*0.08,
+                      fontFamily: 'Roboto',
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(width: screenSize.width * 0.35),  // Add some spacing between the items if needed
+                  Text(
+                    '6',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: screenSize.width*0.08,
+                      fontFamily: 'Roboto',
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+            ],
           ),
         ),
-      ),
-    ),
-
-    Positioned(
-      left: screenSize.width * 0.8,
-      top: screenSize.height * 0.65,
-      child: SizedBox(
-        width: screenSize.width * 0.13,
-        height: screenSize.height * 0.7,
-        child: Text(
-          '6',
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: screenSize.width*0.1,
-            fontFamily: 'Roboto',
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-      ),
-    ),
-    Positioned(
-      left: screenSize.width * 0.8,
-      top: screenSize.height * 0.45,
-      child: SizedBox(
-        width: screenSize.width * 0.2,
-        height: screenSize.height * 0.7,
-        child: Text(
-          '-',
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: screenSize.width*0.2,
-            fontFamily: 'Roboto',
-            fontWeight: FontWeight.bold,
-            height: 0,
-            letterSpacing: screenSize.width*0.048,
-          ),
-        ),
-      ),
-    ),
-
-
-    Positioned(
-      left: screenSize.width * 0.05,
-      top: screenSize.height * 0.46,
-      child: SizedBox(
-        width: screenSize.width * 0.7,
-        height: screenSize.height * 0.3,
-        child: Text(
-          '=',
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: screenSize.width*0.128,
-            fontFamily: 'Luckiest Guy',
-            fontWeight: FontWeight.bold,
-            letterSpacing: screenSize.width*1.28,
-          ),
-        ),
-      ),
-    ),
-    Positioned(
-      left: screenSize.width * -0.03,
-      top: screenSize.height * 0.5,
-      child: SizedBox(
-        width: screenSize.width*0.7 ,
-        height: screenSize.height * 0.1,
-        child: Text(
-          'FAVORABLE OUTCOMES',
-          textAlign: TextAlign.center,
-          style: GoogleFonts.getFont(
-            'Calistoga',
-            color: Colors.white,
-            fontSize: screenSize.width*0.037*0.8,
-            letterSpacing: screenSize.width*0.012,
-            fontWeight: FontWeight.normal,
-          ),
-        ),
-      ),
-    ),
-
-
-    Positioned(
-      left: screenSize.width * 0.03,
-      top: screenSize.height * 0.7,
-      child: SizedBox(
-        width: screenSize.width * 0.5,
-        height: screenSize.height * 0.19,
-        child: Text(
-          'TOTAL OUTCOMES',
-          textAlign: TextAlign.center,
-          style: GoogleFonts.getFont(
-            'Calistoga',
-            color: Colors.white,
-            fontSize:screenSize.width*0.040*0.8,
-            letterSpacing: screenSize.width*0.012,
-            fontWeight: FontWeight.normal,
-          ),
-        ),
-      ),
-    ),
-    //alldice
-    Positioned(
-      left: screenSize.width * 0.03,
-      top: screenSize.height * 0.6,
-      child: Container(
-        width: screenSize.width * 0.6,
-        height: screenSize.height * 0.08,
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/alldice.png'),
-            fit: BoxFit.fill,
-          ),
-        ),
-      ),
-    ),
-    // dice 6
-    Positioned(
-      left: screenSize.width * 0.2,
-      top: screenSize.height * 0.38,
-      child: Container(
-        width: screenSize.width * 0.08,
-        height: screenSize.height * 0.08,
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/6DICE.jpg'),
-            fit: BoxFit.fill,
-          ),
-        ),
-      ),
-    ),
 
       ],
       ),

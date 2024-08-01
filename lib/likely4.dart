@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:probability/dice_example.dart';
-import 'package:probability/dice_example2.dart';
 import 'package:probability/likely3.dart';
 import 'package:probability/likely5.dart';
-import 'package:probability/wheel_example.dart';
 import 'home_page.dart';
-import 'package:collection/collection.dart';
-import 'dart:math';
 
 class likely4 extends StatefulWidget {
   const likely4({Key? key}) : super(key: key);

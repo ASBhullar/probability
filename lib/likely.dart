@@ -1,15 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:probability/dice_example.dart';
-import 'package:probability/dice_example2.dart';
-import 'package:probability/learn_category.dart';
 import 'package:probability/likely2.dart';
-import 'package:probability/play_category.dart';
-import 'package:probability/play_category.dart';
 import 'home_page.dart';
-import 'package:probability/wheel_example.dart';
-import 'dart:io';
-import 'dart:math';
 
 class likely extends StatelessWidget {
   const likely({Key? key});
@@ -80,7 +71,7 @@ class likely extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => LearnCategories()),
+                    MaterialPageRoute(builder: (context) => Homepage()),
                   );
                 },
                 child: Container(
